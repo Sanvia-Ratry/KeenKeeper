@@ -2,26 +2,23 @@
 
 A web app to keep track of the friends you want to stay in touch with. Log calls, texts and video chats, and see how your connections are doing.
 
-<!-- Live demo: add your Vercel link here after deploying -->
+**Live demo:** [add your Vercel link here]
+
+![Dashboard](docs/dashboard.png)
 
 ## Features
 
-- **Dashboard** with summary stats: total friends, on track, need attention, and interactions this month
-- **Friend cards** with tags and color-coded status (due, almost due, on track)
-- **Friend details page** with goal, days since contact, next due date and quick check-in buttons (Call, Text, Video)
-- **Timeline** of logged interactions, filterable by type
-- **Stats page** with a donut chart of interactions by type
+- Dashboard with summary stats: total friends, on track, need attention, and friends due this month
+- Friend cards with tags and colour-coded status (due, almost due, on track)
+- Friend details page with goal, days since contact, next due date, and quick check-in buttons (Call, Text, Video)
+- Timeline of logged interactions, filterable by type
+- Stats page with a donut chart of interactions by type
 - Toast notifications for each check-in
-- Responsive card layouts built with Tailwind CSS
+- Responsive layouts built with Tailwind CSS
 
 ## Tech Stack
 
-- Next.js (App Router)
-- React (Hooks, Context API)
-- Tailwind CSS
-- Recharts
-- React Toastify
-- React Icons
+Next.js (App Router), React (Hooks, Context API), Tailwind CSS, Recharts, React Toastify, React Icons
 
 ## Getting Started
 
@@ -38,29 +35,17 @@ Open http://localhost:3000 in your browser.
 
 ```text
 src/app/
-├── components/   Nav, Footer, Banner, Card, CardGrid, CheckIn
-├── context/      AppContext (shared check-in log)
+├── components/            Nav, Footer, Banner, Card, CardGrid, CheckIn
+├── context/               AppContext (shared check-in log)
 ├── friend-details/[id]/   Friend details page
-├── timeline/     Timeline page
-├── stats/        Stats page
-└── utils/        Date formatting helper
-public/data.json  Friend data
+├── timeline/              Timeline page
+├── stats/                 Stats page
+└── utils/                 Date formatting helper
+public/data.json           Sample friend data
 ```
 
-## Notes
+## Current Limitations
 
-- Friend data comes from a local JSON file (`public/data.json`).
-- Logged interactions are kept in memory and reset when the page is refreshed.
-- The Add Friend, Snooze, Archive, Delete and Edit buttons are UI only for now.
-
-## Roadmap
-
-
-- [ ] Make the Add Friend, Snooze, Archive and Edit buttons work
-- [ ] Make the Timeline and Stats pages fully responsive
-
-
-
-![Home](docs/home.png)
-![Friend details](docs/details.png)
-![Stats](docs/stats.png)
+- Friend data is sample data (fake friends) from a local JSON file, `public/data.json`.
+- Logged check-ins are kept in memory and reset when the page is refreshed.
+- The Add Friend, Edit, Snooze, Archive and Delete buttons are UI only for now.
