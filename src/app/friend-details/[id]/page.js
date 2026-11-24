@@ -5,18 +5,16 @@ import Image from "next/image";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { FiArchive } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { formatDate } from "@/app/utils/formate";
+import { formatDate } from "@/app/utils/formatDate";
 import { IoCallSharp, IoVideocamOffOutline } from "react-icons/io5";
 import { MdOutlineTextsms } from "react-icons/md";
 import CheckIn from "@/app/components/CheckIn";
 
 const page = async ({ params }) => {
   const { id } = await params;
-  const item = data.find((item) => String(item.id) === String(id));
+  const item = data.find((i) => String(i.id) === String(id));
+  if (!item) NotFound();
   const tags = item.tags;
-  if (!item) {
-    return NotFound();
-  }
   return (
     <div className="px-15 sm:px-25 md:px-35 lg:px-45 xl:px-60 py-20 flex flex-col  lg:grid grid-cols-3 gap-6 bg-[#f8fafc]">
       <div className="col-span-1  grid grid-rows-7 gap-4">

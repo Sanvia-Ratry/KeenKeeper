@@ -78,7 +78,7 @@ export default function StatsPage() {
 
   if (logs.length === 0) {
     return (
-      <div className="bg-[#f8fafc] flex flex-col gap-5 px-60 py-20">
+      <div className="bg-[#f8fafc] flex flex-col gap-5 px-4 sm:px-10 lg:px-24 xl:px-60 py-20">
         <div className="bg-white py-6 px-6 border border-gray-50 rounded-lg">
           <p className="text-gray-500">No logs recorded yet. Log a Call, Text, or Video first!</p>
         </div>
@@ -87,7 +87,7 @@ export default function StatsPage() {
   }
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen px-60 py-20 flex flex-col items-center">
+    <div className="bg-[#f8fafc] min-h-screen px-4 sm:px-10 lg:px-24 xl:px-60 py-20 flex flex-col items-center">
       <div className="bg-white p-6 rounded-xl shadow-[0_3px_6px_0_rgba(0,0,0,0.08)] flex flex-col justify-center w-full max-w-lg">
         <h1 className="font-bold text-xl text-font-green mb-2">By Interaction Type</h1>
 

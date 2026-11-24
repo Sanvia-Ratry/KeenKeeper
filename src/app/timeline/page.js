@@ -17,10 +17,9 @@ const Page = () => {
     }
     return item.activity.toLowerCase() === filterType;
   });
-  console.log(filteredLogs);
 
   return (
-    <div className="bg-[#f8fafc] flex flex-col gap-5 px-60 py-20">
+    <div className="bg-[#f8fafc] flex flex-col gap-5 px-4 sm:px-10 lg:px-24 xl:px-60 py-20">
       <div className="space-y-6">
         <h1 className="font-bold text-5xl text-font-green">Timeline</h1>
         <div className="w-48">

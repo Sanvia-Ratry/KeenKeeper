@@ -41,7 +41,7 @@ const Banner = ({ friendsData }) => {
         </div>
         <div className="font-semibold text-3xl text-font-darkGreen px-6 py-8 border border-gray-100 rounded-lg bg-white shadow-[0_3px_6px_0_rgba(0,0,0,0.08)]">
           <p>{InteractionThisMonth.length}</p>
-          <span className="font-normal text-lg text-gray-400">Interactions this month</span>
+          <span className="font-normal text-lg text-gray-400">Due this month</span>
         </div>
       </div>
     </div>
