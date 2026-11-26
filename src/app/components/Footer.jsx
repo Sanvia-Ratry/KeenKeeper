@@ -3,7 +3,7 @@ import React from "react";
 //px-30 md:px-40 lg:px-60 py-20
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-10 bg-[#244d3f] text-white px-25 sm:px-30 md:px-40 lg:px-61.25 pt-20 justify-center text-center">
+    <div className="flex flex-col gap-10 bg-font-darkGreen text-white px-10 sm:px-20 md:px-25 lg:px-61.25 pt-20 justify-center text-center">
       <div className="space-y-4">
         <h1 className="font-extrabold text-3xl sm:text-5xl md:text-8xl">
           Keen<span className="font-medium">Keeper</span>
@@ -24,13 +24,13 @@ const Footer = () => {
             width={40}
             height={40}
             src="/assets/facebook.png"
-            alt="this is a logo of instagram"
+            alt="this is a logo of facebook"
           ></Image>
           <Image
             width={40}
             height={40}
             src="/assets/twitter.png"
-            alt="this is a logo of instagram"
+            alt="this is a logo of twitter"
           ></Image>
         </div>
       </div>

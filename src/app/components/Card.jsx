@@ -5,7 +5,7 @@ import React from "react";
 const Card = ({ item }) => {
   const tags = item.tags;
   return (
-    <Link href={`friend-details/${item.id}`}>
+    <Link href={`/friend-details/${item.id}`}>
       <div className="bg-[#ffffff] space-y-2 w-full h-full px-6 py-6 flex flex-col items-center rounded-xl shadow-[0_3px_6px_0_rgba(0,0,0,0.08)]">
         <Image
           src={item.picture}

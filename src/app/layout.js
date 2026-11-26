@@ -1,6 +1,5 @@
 import { Geist } from "next/font/google";
 import "./globals.css";
-import { RiGhost3Fill } from "react-icons/ri";
 import Nav from "@/app/components/Nav";
 import Footer from "./components/Footer";
 import AppProvider from "./context/AppContext";
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <AppProvider>
           <Nav></Nav>
-          {children}
+          <main className="flex-1 bg-[#f8fafc]">{children}</main>
           <ToastContainer
             position="top-right"
             autoClose={5000}

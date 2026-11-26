@@ -14,7 +14,6 @@ const Banner = ({ friendsData }) => {
     const dueDate = new Date(friends.next_due_date);
     return dueDate.getFullYear() === currentYear && dueDate.getMonth() === currentMonth;
   });
-  console.log(InteractionThisMonth);
 
   return (
     <div className="text-center space-y-4">

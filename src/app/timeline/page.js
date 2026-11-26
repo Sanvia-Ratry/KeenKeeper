@@ -19,13 +19,13 @@ const Page = () => {
   });
 
   return (
-    <div className="bg-[#f8fafc] flex flex-col gap-5 px-4 sm:px-10 lg:px-24 xl:px-60 py-20">
+    <div className="bg-[#f8fafc] flex flex-col gap-5 px-6 sm:px-10 lg:px-24 xl:px-60 py-20">
       <div className="space-y-6">
         <h1 className="font-bold text-5xl text-font-green">Timeline</h1>
         <div className="w-48">
           <select
             onChange={(e) => setFilter(e.target.value)}
-            className="w-full px-3.5 py-2.5 bg-white border border-gray-200 rounded text-sm font-medium text-gray-700 cursor-pointer focus:outline-none"
+            className="w-fit md:w-full px-3.5 py-2.5 bg-white border border-gray-200 rounded text-sm font-medium text-gray-700 cursor-pointer focus:outline-none"
           >
             <option value="all">Filter Timeline</option>
             <option value="text">Text</option>
@@ -34,6 +34,14 @@ const Page = () => {
           </select>
         </div>
       </div>
+      {logs.length === 0 && (
+        <p className="text-gray-500">
+          No check-ins yet. Log a Call, Text or Video from a friend&apos;s page.
+        </p>
+      )}
+      {logs.length > 0 && filteredLogs.length === 0 && (
+        <p className="text-gray-500">No {filterType} yet!!!</p>
+      )}
       {filteredLogs.map((item, ind) => (
         <div
           key={ind}

@@ -1,6 +1,5 @@
 import React from "react";
 import data from "/public/data.json";
-import NotFound from "@/app/not-found";
 import Image from "next/image";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { FiArchive } from "react-icons/fi";
@@ -9,14 +8,17 @@ import { formatDate } from "@/app/utils/formatDate";
 import { IoCallSharp, IoVideocamOffOutline } from "react-icons/io5";
 import { MdOutlineTextsms } from "react-icons/md";
 import CheckIn from "@/app/components/CheckIn";
+import { notFound } from "next/navigation";
 
 const page = async ({ params }) => {
   const { id } = await params;
   const item = data.find((i) => String(i.id) === String(id));
-  if (!item) NotFound();
+  if (!item) {
+    notFound();
+  }
   const tags = item.tags;
   return (
-    <div className="px-15 sm:px-25 md:px-35 lg:px-45 xl:px-60 py-20 flex flex-col  lg:grid grid-cols-3 gap-6 bg-[#f8fafc]">
+    <div className="px-10 sm:px-20 md:px-25 lg:px-45 xl:px-60 py-20 flex flex-col  lg:grid grid-cols-3 gap-6 bg-[#f8fafc]">
       <div className="col-span-1  grid grid-rows-7 gap-4">
         <div className="row-span-4 bg-[#ffffff] space-y-1 w-full h-full px-6 py-6 flex flex-col items-center rounded-xl shadow-[0_3px_6px_0_rgba(0,0,0,0.08)]">
           <Image

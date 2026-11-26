@@ -10,9 +10,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    agentFeedback: true,
-  },
+
   reactCompiler: true,
   turbopack: {
     rules: {

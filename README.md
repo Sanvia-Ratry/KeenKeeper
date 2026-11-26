@@ -4,8 +4,6 @@ A web app to keep track of the friends you want to stay in touch with. Log calls
 
 **Live demo:** [add your Vercel link here]
 
-![Dashboard](docs/dashboard.png)
-
 ## Features
 
 - Dashboard with summary stats: total friends, on track, need attention, and friends due this month
