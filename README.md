@@ -2,7 +2,7 @@
 
 A web app to keep track of the friends you want to stay in touch with. Log calls, texts and video chats, and see how your connections are doing.
 
-**Live demo:** [add your Vercel link here]
+**Live demo:** https://keenkeeper-two.vercel.app/
 
 ## Features
 
